@@ -115,8 +115,17 @@ public class NavigationViewActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
+        if (id == R.id.action_about) {
+            return true;
+        }
         if (id == R.id.action_settings) {
             return true;
+        }
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_signout) {
+            Intent intent = new Intent(NavigationViewActivity.this, LoginActivity.class);
+            startActivity(intent);
+            finish();
         }
 
         return super.onOptionsItemSelected(item);
