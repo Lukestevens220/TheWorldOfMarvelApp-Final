@@ -16,10 +16,6 @@ public class MainActivity extends AppCompatActivity {
     private static final String TWITTER_SECRET = "YAPR3DanSeIi4tEFTwgQWDbtD9zdCMwJMSoZbrNXx2WMSI7WGT";
 
 
-//    private static final String MARVEL_KEY = "144ae9a1d6261ea12ca170b8d47d6df3";
-//    private static final String MARVEL_SECRET = "75bc31531c853f8b865dd56109aef6689cd68144";
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
