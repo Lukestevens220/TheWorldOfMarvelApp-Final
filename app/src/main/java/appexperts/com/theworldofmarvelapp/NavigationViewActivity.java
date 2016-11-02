@@ -14,6 +14,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewGroup;
+
+import com.twitter.sdk.android.core.Callback;
+import com.twitter.sdk.android.core.Result;
+import com.twitter.sdk.android.core.TwitterException;
+import com.twitter.sdk.android.core.models.Tweet;
+import com.twitter.sdk.android.tweetui.TweetUtils;
+import com.twitter.sdk.android.tweetui.TweetView;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -29,18 +37,18 @@ public class NavigationViewActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
         generateMarvelHash("144ae9a1d6261ea12ca170b8d47d6df3","75bc31531c853f8b865dd56109aef6689cd68144");
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-
-                Intent intent = new Intent(NavigationViewActivity.this, LoginActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//
+//                Intent intent = new Intent(NavigationViewActivity.this, LoginActivity.class);
+//                startActivity(intent);
+//                finish();
+//            }
+//        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -50,6 +58,23 @@ public class NavigationViewActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+//        // TODO: Use a more specific parent
+//        final ViewGroup parentView = (ViewGroup) getWindow().getDecorView().getRootView();
+//        // TODO: Base this Tweet ID on some data from elsewhere in your app
+//        long tweetId = 631879971628183552L;
+//        TweetUtils.loadTweet(tweetId, new Callback<Tweet>() {
+//            @Override
+//            public void success(Result<Tweet> result) {
+//                TweetView tweetView = new TweetView(NavigationViewActivity.this, result.data);
+//                parentView.addView(tweetView);
+//            }
+//            @Override
+//            public void failure(TwitterException exception) {
+//                Log.d("TwitterKit", "Load Tweet failure", exception);
+//            }
+//        });
+
     }
 
     public static String generateMarvelHash (String publicKey, String privateKey) {
