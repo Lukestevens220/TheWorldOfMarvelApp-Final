@@ -1,23 +1,9 @@
 package appexperts.com.theworldofmarvelapp.adapter;
 
-import android.content.Context;
-import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-
-import java.util.List;
-
-import appexperts.com.theworldofmarvelapp.R;
-import appexperts.com.theworldofmarvelapp.models.Characters;
-import appexperts.com.theworldofmarvelapp.utilities.ItemClickListener;
-
 //
 //public class CoverFlowAdapter extends RecyclerView.Adapter<CoverFlowAdapter.MovieViewHolder> {
 //
-//    private List<Characters.Data.Result> characters;
+//    private List<Hero.Data.Result> characters;
 //    String title, description;
 //    private int rowLayout;
 //    int size=0;
@@ -76,7 +62,7 @@ import appexperts.com.theworldofmarvelapp.utilities.ItemClickListener;
 //        }
 //    }
 //
-//    public CoverFlowAdapter(List<Characters.Data.Result> movies, int rowLayout, Context context) {
+//    public CoverFlowAdapter(List<Hero.Data.Result> movies, int rowLayout, Context context) {
 //        this.characters = movies;
 //        this.rowLayout = rowLayout;
 //        this.context = context;

@@ -13,6 +13,8 @@ import com.google.android.gms.common.GooglePlayServicesRepairableException;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlacePicker;
 
+import butterknife.BindView;
+
 
 /**
  * Created by TheAppExperts on 31/10/2016.
@@ -35,7 +37,7 @@ public class MapActivity extends AppCompatActivity {
 
                 PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
                 try {
-                    startActivityForResult(builder.build(MapActivity.this), PLACE_PICKER_REQUEST);
+                    startActivityForResult(builder.build(getApplicationContext()), PLACE_PICKER_REQUEST);
                 } catch (GooglePlayServicesRepairableException e) {
                     e.printStackTrace();
                 } catch (GooglePlayServicesNotAvailableException e) {

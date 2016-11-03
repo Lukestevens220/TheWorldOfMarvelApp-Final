@@ -24,7 +24,7 @@ public class ApiClient {
 
     private static LruCache<Class<?>, Observable<?>> apiObservables;
 
-    public static Retrofit getClient() {
+    public static ApiInterface getClient() {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
@@ -38,7 +38,7 @@ public class ApiClient {
                     .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                     .build();
         }
-        return retrofit;
+        return retrofit.create(ApiInterface.class);
     }
 
     /**

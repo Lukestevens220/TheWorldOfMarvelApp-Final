@@ -12,6 +12,6 @@ public class Constants {
     public static final String CHARACTERS_URL = "/v1/public/characters";
     // Fetches lists of comics filtered by a character id
     public static final String COMICS_URL = "/v1/public/characters/{characterId}/comics";
-    public static final String PRODUCTS_BY_CATEGORY_URL = "";
-    public static final String PRODUCT_DETAILS_URL = "";
+    public static final String SERIES_URL = "/v1/public/series";
+    public static final String STORIES_URL = "/v1/public/stories";
 }

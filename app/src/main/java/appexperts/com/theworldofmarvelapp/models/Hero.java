@@ -10,7 +10,7 @@ import java.util.List;
  * Created by TheAppExperts on 31/10/2016.
  */
 
-public class Characters {
+public class Hero {
 
     @SerializedName("code")
     @Expose

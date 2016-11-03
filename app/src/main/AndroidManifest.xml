@@ -50,7 +50,7 @@
             android:label="@string/title_activity_navigation_view"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <meta-data android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCwv-BQrpdVkOiMxspqSjTFNKADO0M6xHk"></meta-data>
+            android:value="AIzaSyA6y_Tf6cezmDKp7aMIbKzbomeNjNsmnNY"></meta-data>
 
     </application>
 
