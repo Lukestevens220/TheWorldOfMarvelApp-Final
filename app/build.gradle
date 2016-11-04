@@ -84,7 +84,7 @@ dependencies {
     //  compile "com.squareup.okhttp:logging-interceptor:$rootProject.okhttpinterceptorVersion"
     //compile "com.google.code.gson:gson:$rootProject.gsonVersion"
 
-    //Image
+    //appexperts.com.theworldofmarvelapp.comic.appexperts.com.theworldofmarvelapp.comic.Image
     compile "com.squareup.picasso:picasso:$rootProject.picassoVersion"\
 
     // Dagger and Butterknife dependencies

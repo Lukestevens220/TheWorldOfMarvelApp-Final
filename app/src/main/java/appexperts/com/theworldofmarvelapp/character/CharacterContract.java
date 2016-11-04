@@ -1,13 +1,14 @@
-package appexperts.com.theworldofmarvelapp.Comic;
+package appexperts.com.theworldofmarvelapp.character;
 
+import appexperts.com.theworldofmarvelapp.models.Hero;
 import appexperts.com.theworldofmarvelapp.mvp.BasePresenter;
 import appexperts.com.theworldofmarvelapp.mvp.BaseView;
 
 /**
- * Created by TheAppExperts on 04/11/2016.
+ * Created by TheAppExperts on 03/11/2016.
  */
 
-public interface ComicContract {
+public interface CharacterContract {
 
     interface PresenterContract extends BasePresenter {
 
@@ -16,12 +17,12 @@ public interface ComicContract {
 
     }
 
-    interface ViewContract extends BaseView<ComicContract.PresenterContract> {
+    interface ViewContract extends BaseView<PresenterContract> {
 
         void startProgressDialog();
         void dismissProgressDialog();
         void displayError();
-        void setProductDetails(Result productDetails);
+        void setProductDetails(Hero.Data.Result productDetails);
 
     }
 }

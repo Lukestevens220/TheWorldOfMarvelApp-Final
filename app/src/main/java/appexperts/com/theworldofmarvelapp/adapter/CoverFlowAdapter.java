@@ -3,7 +3,7 @@ package appexperts.com.theworldofmarvelapp.adapter;
 //
 //public class CoverFlowAdapter extends RecyclerView.Adapter<CoverFlowAdapter.MovieViewHolder> {
 //
-//    private List<Hero.Data.Result> characters;
+//    private List<Hero.appexperts.com.theworldofmarvelapp.comic.appexperts.com.theworldofmarvelapp.comic.appexperts.com.theworldofmarvelapp.series.appexperts.com.theworldofmarvelapp.series.appexperts.com.theworldofmarvelapp.series.Data.appexperts.com.theworldofmarvelapp.comic.appexperts.com.theworldofmarvelapp.comic.appexperts.com.theworldofmarvelapp.series.appexperts.com.theworldofmarvelapp.series.appexperts.com.theworldofmarvelapp.series.Result> characters;
 //    String title, description;
 //    private int rowLayout;
 //    int size=0;
@@ -62,7 +62,7 @@ package appexperts.com.theworldofmarvelapp.adapter;
 //        }
 //    }
 //
-//    public CoverFlowAdapter(List<Hero.Data.Result> movies, int rowLayout, Context context) {
+//    public CoverFlowAdapter(List<Hero.appexperts.com.theworldofmarvelapp.comic.appexperts.com.theworldofmarvelapp.comic.appexperts.com.theworldofmarvelapp.series.appexperts.com.theworldofmarvelapp.series.appexperts.com.theworldofmarvelapp.series.Data.appexperts.com.theworldofmarvelapp.comic.appexperts.com.theworldofmarvelapp.comic.appexperts.com.theworldofmarvelapp.series.appexperts.com.theworldofmarvelapp.series.appexperts.com.theworldofmarvelapp.series.Result> movies, int rowLayout, Context context) {
 //        this.characters = movies;
 //        this.rowLayout = rowLayout;
 //        this.context = context;

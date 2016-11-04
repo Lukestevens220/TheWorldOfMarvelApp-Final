@@ -4,7 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import appexperts.com.theworldofmarvelapp.Comic.ComicPresenter;
+import appexperts.com.theworldofmarvelapp.character.CharacterPresenter;
 
 import static nl.qbusict.cupboard.CupboardFactory.cupboard;
 
@@ -31,7 +31,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     static {
 
-        cupboard().register(ComicPresenter.ComicDatabaseEntry.class);
+        cupboard().register(CharacterPresenter.ComicDatabaseEntry.class);
         //cupboard().register(ProductsByCategoryPresenter.ProductsByCategoryDatabaseEntry.class);
         //cupboard().register(ProductDetailsPresenter.ProductDetailsDatabaseEntry.class);
     }

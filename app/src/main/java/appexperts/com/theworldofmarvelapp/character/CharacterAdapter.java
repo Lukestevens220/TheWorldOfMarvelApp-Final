@@ -1,4 +1,4 @@
-package appexperts.com.theworldofmarvelapp.Comic;
+package appexperts.com.theworldofmarvelapp.character;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -14,36 +14,37 @@ import java.util.ArrayList;
 import java.util.List;
 
 import appexperts.com.theworldofmarvelapp.R;
+import appexperts.com.theworldofmarvelapp.models.Hero;
 
 /**
- * Created by TheAppExperts on 04/11/2016.
+ * Created by TheAppExperts on 03/11/2016.
  */
 
-public class ComicAdapter extends RecyclerView.Adapter {
+public class CharacterAdapter extends RecyclerView.Adapter {
 
     private Context context;
-    ArrayList<Result> comics;
+    ArrayList<Hero.Data.Result> comics;
 
-    public ComicAdapter(Context context, List<Result> comicList){
+    public CharacterAdapter(Context context, List<Hero.Data.Result> comicList){
         this.context = context;
-        comics = (ArrayList<Result>) comicList;
+        comics = (ArrayList<Hero.Data.Result>) comicList;
     }
 
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.comic_item, parent, false);
-        return new appexperts.com.theworldofmarvelapp.character.CharacterAdapter.ComicViewHolder(v);
+        return new ComicViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int position) {
-        Result comic = comics.get(position);
-        appexperts.com.theworldofmarvelapp.character.CharacterAdapter.ComicViewHolder holder = (appexperts.com.theworldofmarvelapp.character.CharacterAdapter.ComicViewHolder) viewHolder;
+        Hero.Data.Result comic = comics.get(position);
+        ComicViewHolder holder = (ComicViewHolder) viewHolder;
 //        holder.comicId.setText(comic.get());
         holder.id.setText(comic.getId().toString());
         holder.description.setText(comic.getDescription());
-        holder.title.setText(comic.getTitle());
+        holder.title.setText(comic.getName());
         Picasso.with(context).load(comic.getResourceURI()).into(holder.comicImageView);
 
     }
@@ -56,7 +57,7 @@ public class ComicAdapter extends RecyclerView.Adapter {
     public static class ComicViewHolder extends RecyclerView.ViewHolder{
 
         public ImageView comicImageView;
-        //        public TextView comicId;
+//        public TextView comicId;
         public TextView id;
         public TextView description;
         public TextView title;

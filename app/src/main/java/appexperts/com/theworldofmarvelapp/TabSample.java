@@ -25,10 +25,10 @@ public class TabSample extends TabActivity {
 	private void setTabs()
 	{
 		addTab("Home", R.drawable.tab_home, NavigationViewActivity.class);
-		addTab("Comics", R.drawable.tab_search, NavigationViewActivity.class);
+		addTab("appexperts.com.theworldofmarvelapp.series.appexperts.com.theworldofmarvelapp.stories.Comics", R.drawable.tab_search, NavigationViewActivity.class);
 		addTab("Series", R.drawable.tab_home, NavigationViewActivity.class);
 		addTab("Find Superheroes", R.drawable.tab_search, MapActivity.class);
-		addTab("Stories", R.drawable.tab_home, NavigationViewActivity.class);
+		addTab("appexperts.com.theworldofmarvelapp.series.appexperts.com.theworldofmarvelapp.stories.Stories", R.drawable.tab_home, NavigationViewActivity.class);
 	}
 	
 	private void addTab(String labelId, int drawableId, Class<?> c)

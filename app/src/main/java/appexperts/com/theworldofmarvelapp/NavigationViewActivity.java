@@ -1,10 +1,14 @@
 package appexperts.com.theworldofmarvelapp;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.widget.SearchView;
 import android.util.Log;
+import android.view.MenuInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,6 +19,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
+import android.widget.Adapter;
 
 import com.twitter.sdk.android.core.Callback;
 import com.twitter.sdk.android.core.Result;
@@ -59,13 +64,14 @@ public class NavigationViewActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+
 //        // TODO: Use a more specific parent
 //        final ViewGroup parentView = (ViewGroup) getWindow().getDecorView().getRootView();
 //        // TODO: Base this Tweet ID on some data from elsewhere in your app
 //        long tweetId = 631879971628183552L;
 //        TweetUtils.loadTweet(tweetId, new Callback<Tweet>() {
 //            @Override
-//            public void success(Result<Tweet> result) {
+//            public void success(appexperts.com.theworldofmarvelapp.comic.appexperts.com.theworldofmarvelapp.comic.appexperts.com.theworldofmarvelapp.series.appexperts.com.theworldofmarvelapp.series.appexperts.com.theworldofmarvelapp.series.appexperts.com.theworldofmarvelapp.stories.Result<Tweet> result) {
 //                TweetView tweetView = new TweetView(NavigationViewActivity.this, result.data);
 //                parentView.addView(tweetView);
 //            }
@@ -115,6 +121,8 @@ public class NavigationViewActivity extends AppCompatActivity
         return String.valueOf(System.currentTimeMillis() / 1000L);
     }
 
+
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -129,8 +137,18 @@ public class NavigationViewActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.navigation_view, menu);
-        return true;
-    }
+            // Associate searchable configuration with the SearchView
+            SearchManager searchManager =
+                    (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+            SearchView searchView =
+                    (SearchView) menu.findItem(R.id.action_search).getActionView();
+            searchView.setSearchableInfo(
+                    searchManager.getSearchableInfo(getComponentName()));
+
+
+            return true;
+        }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

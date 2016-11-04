@@ -35,8 +35,38 @@
 
     <!--</FrameLayout>    &lt;!&ndash;</android.support.v7.widget.Toolbar>&ndash;&gt;-->
 
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/AppTheme"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
 
 
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+                <ImageView
+                    android:id="@+id/toolbar_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/marvellogo"
+                    tools:ignore="ContentDescription"
+                    android:layout_gravity="center"/>
+            </FrameLayout>
+        </android.support.v7.widget.Toolbar>
+        <!--android:background="?attr/colorPrimaryDark"-->
+        <!--app:popupTheme="@style/AppTheme.PopupOverlay" />-->
+
+
+    </android.support.design.widget.AppBarLayout>
 
     <!--</android.support.design.widget.AppBarLayout>-->
 
@@ -59,6 +89,7 @@
             android:id="@+id/email_login_form"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
             android:layout_gravity="center_horizontal"
             android:orientation="vertical">
 
@@ -67,16 +98,16 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2"></View>
 
-            <TextView
-                android:text="The World Of Marvel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
-                android:layout_marginLeft="30dp"
-                android:textSize="30dp"
-                android:id="@+id/textView"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true" />
+            <!--<TextView-->
+                <!--android:text="The World Of Marvel"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="80dp"-->
+                <!--android:layout_marginLeft="30dp"-->
+                <!--android:textSize="30dp"-->
+                <!--android:id="@+id/textView"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:layout_centerHorizontal="true" />-->
 
 
             <android.support.design.widget.TextInputLayout

@@ -1,4 +1,4 @@
-package appexperts.com.theworldofmarvelapp.Comic;
+package appexperts.com.theworldofmarvelapp.character;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -17,14 +17,14 @@ import static nl.qbusict.cupboard.CupboardFactory.cupboard;
  * Created by TheAppExperts on 03/11/2016.
  */
 
-public class ComicPresenter implements ComicContract.PresenterContract {
-    private ComicContract.ViewContract fragment;
+public class CharacterPresenter implements CharacterContract.PresenterContract {
+    private CharacterContract.ViewContract fragment;
     private ApiInterface observables;
     private Context context;
     private int productId;
     private static final String TAG = "StoriesPresenter";
 
-    public ComicPresenter(Context context, ComicContract.ViewContract fragment) {
+    public CharacterPresenter(Context context, CharacterContract.ViewContract fragment) {
         this.context = context;
         this.fragment = fragment;
         connectToService();
@@ -88,7 +88,7 @@ public class ComicPresenter implements ComicContract.PresenterContract {
         ComicDatabaseEntry entry = cupboard().withDatabase(db).get(ComicDatabaseEntry.class, productId);
         if (entry != null) {
             Gson gson = new Gson();
-            Result results = gson.fromJson(entry.entryString, Result.class);
+            Hero.Data.Result results = gson.fromJson(entry.entryString, Hero.Data.Result.class);
             processResults(results);
         } else {
             fragment.displayError();
@@ -96,7 +96,7 @@ public class ComicPresenter implements ComicContract.PresenterContract {
         }
 
     }
-    private void processResults(Result results) {
+    private void processResults(Hero.Data.Result results) {
         if (results != null) {
             fragment.setProductDetails(results);
         } else {
